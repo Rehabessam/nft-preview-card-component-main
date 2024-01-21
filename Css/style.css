@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;700&display=swap');
+:root {
+    --body-bg:hsl(217, 54%, 11%);
+    --card-bg:hsl(216, 50%, 16%);
+    --txt-color: hsl(215, 51%, 70%);
+    --body-lightbg:#ccc;
+    --card-lightbg:#777;
+    --txt-lightcolor:#bca987;
+}
 *
 {
     box-sizing: border-box;
@@ -13,7 +21,7 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #0d1a2d;
+    background:var(--body-bg);
     flex-direction: column;
 }
 
@@ -22,17 +30,17 @@ body
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #13273e;
+  background:var(--card-bg);
   width: 90%;
   border-radius: 10px;
   box-shadow: 0 30px 30px 0 rgba(5, 5, 5, 0.2), 0 30px 50px 0 rgba(6, 6, 6, 0.19);
   margin-block: auto;
 }
 section {
-    width:90%;
+    width:88%;
     height:94%;
     border-radius:10px;
-    margin-block:3%;
+    margin-block:6%;
 }
 
 .master-div {
@@ -43,12 +51,17 @@ section {
     border-radius:10px;
     margin:0;
     padding:0;
-    background-color: white;
-    width:30px;
-    height: 150px;
+    width: 100%;
+    height: 50vh;
 
 }
-
+.image-before
+{
+    background: url(../images/image-equilibrium.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
 .image-container {
     grid-column:1/2;
     grid-row:1/2;
@@ -60,16 +73,28 @@ section {
     justify-content:center;
     background:rgba(0, 255, 247, 0.5);
     visibility:hidden;
+    border-radius: 10px;
 }
-.master-div:hover .view-container {
+.master-div:hover .image-after {
     visibility:visible;
 }
-h1
+.icon{
+    width:10%;
+    margin:auto;
+}
+img.orignal-image {
+    width:100%;
+    height:100%;
+    border-radius:10px;
+} 
+
+.text h1
 {
-    font-size: 16px;
-    padding-left: 25px;
+    font-size: 17px;
     color: white;
+    padding-top: 25px;
     margin: 0;
+    font-family: var(--font-family-two);
 }
 h1:hover
 {
@@ -77,102 +102,171 @@ h1:hover
     color:aqua;
     cursor: pointer;
 }
-p
+.text p
 {
-    padding-left: 25px;
     color: rgb(196, 194, 194);
     margin: 0;
-    padding-top: 17px;
+    padding: 17px 20px 0 0;
     font-size: 14px;
 }
 
 .days
 {
-    padding: 0 30px;
-    width: 100%;
-    display: flex;
-    /* border-bottom: 0.1px solid rgb(114, 112, 112); */
-    justify-content: space-between;
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid  #6c819e;
 }
-
-.right {
-    display: flex;
-    justify-content:end ;
-}
-.left {
-    display: flex;
-    justify-content:end ;
-    align-items: center;   
-}
-.left h4{
-    display: inline-block;
-    font-size: 12px;
-    margin: 0;
-    margin-left: 6px;
-    padding-top:3px;
-    color: aqua;
-    
+.days div
+{
+    display:flex;
+    align-items:center;
 }
 .left img
 {
-    padding-top: 2px;
+    margin-right: 7px;
 }
-.left img
+.left p
 {
-    padding-top: 1px;
+   color: aqua;
+}
+.right img
+{
+    margin-right: 7px;
 }
 
-
-.content h5{
-    
-    display: inline-block;
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
-    margin-top: 1px;
-    color: #91abcb;
+.right p
+{
+    color: #8bacd9;
+}
+.avatar
+{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
 }
 
+.pic
+{
+    height:32px;
+    width:32px;
+    margin-right:2%;
+}
 .pic img
 {
-    width: 30px;
-    height: 30px;
+    height:32px;
+    width:32px;
     border: 2px solid white;
     border-radius: 50%;
-    margin-right: 10px;
-    margin-bottom: 0;
-}
-.name
-{
-    display: flex;
-    margin-bottom: 7px;
-    margin-top: 20px;
-}
-.pic{
-    width: 3vw;
-    margin-left: 20px;
 }
 .text
 {
+    color: white;
+    font-size: 15px;
+}
+.text a {
+    color: white;
+    text-decoration: none;
+}
+.text a:hover {
+    color: aqua;
+}
+.labels
+{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    
    
-    padding-left:7px;
-    font-size: 13px;
-    margin-top: 7px;
-    color: rgb(177, 176, 176);
 }
-.text a
-{ text-decoration: none;
-  color: white;
-  padding-left: 3px;
-  font-family: var(--font-family-two);
-}
-.text a:hover
-{ 
-  
-  color:aqua;
-  
-  
-}
-/* .attribution { font-size: 11px; text-align: center; margin-top: 15px; color: white;}
+.attribution { font-size: 11px; text-align: center; margin-top: 7px; color: white;margin-top: 15px;
+margin-bottom: 15px;}
 .attribution a { color: hsl(228, 45%, 44%); }
- */
+input {
+    display:none
+}
+label:has(.default-theme) {
+    color:var(--txt-color);
+    background:var(--body-bg);
+    border: 2px solid var(--card-bg);
+    border-radius:9px;
+    padding: 15px ;
+    margin-inline: 5px;
+    
+}
+label:has(.black-theme) {
+    color:white;
+    background:black;
+    border:2px solid white;
+    border-radius:9px;
+    padding: 15px ;
+    margin-inline: 5px;
+}
+label:has(.light-theme){
+    color:var(--txt-lightcolor);
+    background:var(--card-lightbg);
+    border:2px solid var(--body-lightbg);
+    border-radius:9px;
+    padding: 15px ;
+    margin-inline: 5px;
+}
+body:has(.default-theme:checked) {
+    background:var(--body-bg);
+    color:var(--txt-color);
+}
+body:has(.default-theme:checked) .card {
+    background:var(--card-bg);
+}
+body:has(.black-theme:checked) {
+    background:rgb(25, 25, 25);
+    color:white;
+}
+body:has(.black-theme:checked) .image-after {
+    background:rgba(15, 14, 14, 0.5);
+}
+body:has(.black-theme:checked) .card {
+    background:black;
+}
+body:has(.light-theme:checked) {
+    background:var(--body-lightbg);
+    color:var(--txt-lightcolor);
+}
+body:has(.light-theme:checked) .card {
+    background:var(--card-lightbg);
+}
+body:has(.light-theme:checked) .image-after {
+    background:rgb(169 181 181 / 50%);
+}
+@media screen and (min-width:375px) {
+    .card {
+        width:80%;
+    }
+}
+@media screen and (min-width:500px) {
+    .card {
+        width:70%;
+    }
+}
+@media screen and (min-width:700px) {
+    .card {
+        width:60%;
+    }
+}
+@media screen and (min-width:900px) {
+    .card {
+        width:46%;
+    }
+}
+@media screen and (min-width:1000px) {
+    .card {
+        width:40%;
+    }
+}
+@media screen and (min-width:1200px) {
+    .card {
+        width:30%;
+    }
+}
+@media screen and (min-width:1440px) {
+    .card {
+        width:20%;
+    }
+}
