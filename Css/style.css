@@ -239,6 +239,42 @@ body:has(.light-theme:checked) .image-after {
     .card {
         width:80%;
     }
+    .master-div {
+        position:relative;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:1fr;
+        border-radius:10px;
+        margin:0;
+        padding:0;
+        width: 100%;
+        height: 35vh;
+    
+    }
+    .text
+{
+    color: rgb(162, 159, 159);
+    font-size: 13px;
+}
+.left img
+{
+    margin-right: 7px;
+}
+.left p
+{
+   color: aqua;
+   font-size: 12px;
+}
+.right img
+{
+    margin-right: 4px;
+}
+
+.right p
+{
+    color: #8bacd9;
+    font-size: 12px;
+}
     .labels{
         display: flex;
         flex-direction: column;
@@ -250,6 +286,25 @@ body:has(.light-theme:checked) .image-after {
     .card {
         width:70%;
     }
+    .master-div {
+        position:relative;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:1fr;
+        border-radius:10px;
+        margin:0;
+        padding:0;
+        width: 100%;
+        height: 30vh;
+    
+    }
+    .text p
+{
+    color: rgb(196, 194, 194);
+    margin: 0;
+    padding: 17px 17px 0 0;
+    font-size: 14px;
+}
     .labels{
         display: flex;
         flex-direction: column;
@@ -270,6 +325,18 @@ body:has(.light-theme:checked) .image-after {
     .card {
         width:46%;
     }
+    .master-div {
+        position:relative;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:1fr;
+        border-radius:10px;
+        margin:0;
+        padding:0;
+        width: 100%;
+        height: 30vh;
+    
+    }
     .labels{
         display: flex;
         flex-direction: column;
@@ -280,10 +347,34 @@ body:has(.light-theme:checked) .image-after {
     .card {
         width:40%;
     }
+    .master-div {
+        position:relative;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:1fr;
+        border-radius:10px;
+        margin:0;
+        padding:0;
+        width: 100%;
+        height: 50vh;
+    
+    }
 }
 @media screen and (min-width:1200px) {
     .card {
         width:30%;
+    }
+    .master-div {
+        position:relative;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:1fr;
+        border-radius:10px;
+        margin:0;
+        padding:0;
+        width: 100%;
+        height: 50vh;
+    
     }
 }
 @media screen and (min-width:1440px) {
