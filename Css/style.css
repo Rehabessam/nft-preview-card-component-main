@@ -239,21 +239,42 @@ body:has(.light-theme:checked) .image-after {
     .card {
         width:80%;
     }
+    .labels{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10rem;
+    }
+
 }
-@media screen and (min-width:500px) {
+@media screen and (max-width:500px) {
     .card {
         width:70%;
+    }
+    .labels{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10rem;
     }
 }
 @media screen and (min-width:700px) {
     .card {
         width:60%;
     }
+    .labels{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10rem;
+    }
 }
 @media screen and (min-width:900px) {
     .card {
         width:46%;
     }
+    .labels{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10rem;
+    }   
 }
 @media screen and (min-width:1000px) {
     .card {
